@@ -2,18 +2,19 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class Exercise6ErrorTest {
-    public static List<String> fruits=List.of("Bannana", "Per", "Apple");
+import static org.assertj.core.api.Assertions.assertThat;
 
-    public static void getFruit(int i){
-        fruits.get(i);
-    }
+public class Exercise6ErrorTest {
 
 
 
     @Test
     public void errorTest(){
-        
+        assertThat(ExampleArray.fruits).
+
+                assertThatExceptionOfType(ArrayIndexOutOfBoundsException.class)
+                // ".isThrownBy" ejecuta el código (la lambda) que debería lanzar la excepción.
+                .isThrownBy(() -> ExceptionThrower.accessInvalidIndex())
 
     }
 }

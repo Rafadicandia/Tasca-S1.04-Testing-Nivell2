@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
-import static org.assertj.core.api.Assertions.assertThat; // <-- Usa ESTE
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Exercise5MapTest {
 
