@@ -1,4 +1,5 @@
 
+import org.assertj.core.api.ListAssert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,11 +10,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Exercise4ObjectArraysTest {
 
     @Test
-    public void correctOrder(){
+    public void orderTest(){
         List<Object> zoo = new ArrayList<>();
+        List<Object> zooUnorganized = new ArrayList<>();
         Animal hipo = new Animal("Hipo");
         Keeper jhon = new Keeper("Jhon");
         Animal monkey = new Animal("Monkey");
+        Animal cangaroo = new Animal("Cangaroo");
+
         int cages = 10;
 
         zoo.add(hipo);
@@ -21,7 +25,21 @@ public class Exercise4ObjectArraysTest {
         zoo.add(monkey);
         zoo.add(cages);
 
+        zooUnorganized.add(cages);
+        zooUnorganized.add(hipo);
+        zooUnorganized.add(monkey);
+        zooUnorganized.add(jhon);
+
+
         assertThat(zoo).containsExactly(hipo, jhon, monkey, cages);
+
+        assertThat(zoo).containsOnlyElementsOf(zooUnorganized);
+
+        assertThat(zoo).containsOnlyOnce(cages);
+
+        assertThat(zoo).doesNotContain(cangaroo);
+
+
 
 
     }
@@ -29,4 +47,9 @@ public class Exercise4ObjectArraysTest {
 
 
 
-}
+    }
+
+
+
+
+
