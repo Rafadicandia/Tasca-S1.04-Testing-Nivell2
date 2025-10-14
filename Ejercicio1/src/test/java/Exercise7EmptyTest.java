@@ -4,7 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Exercise7EmptyTest {
     @Test
-    public void checkEmptyObject(){
-        assertThat(Optional).isEmpty;
+    public void checkEmptyOptional(){
+
+        Optional<String> maybeValue = OptionalCreator.createEmptyOptional();
+        assertThat(maybeValue).isEmpty();
     }
 }
