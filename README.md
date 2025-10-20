@@ -1,26 +1,57 @@
 
 ## 📄 Description - Exercise Statement
 
-### Exercise 1
-An assertion that demonstrates that the value of two integer objects is equal, and another one that indicates that it is not.
-### Exercise 2
-An assertion that demonstrates that the reference to one object is the same as another, and another one that indicates that it is different.
-### Exercise 3
-An assertion that indicates that two integer arrays are identical.
-### Exercise 4
-Create an `ArrayList` containing several types of objects (create them as well). Write an assertion to verify the order of the objects in the `ArrayList` as they were inserted.
-Now, verify that the previous list contains the objects in any order.
-Verify that, in the previous list, one of the objects has been added only once. Leave one of the elements unadded, and verify that the list does not contain this latter element.
-### Exercise 5
-Create a map and verify that it contains one of the keys you add to it.
-### Exercise 6
+The following exercises require implementing tests using the **AssertJ** fluent assertion style.
+
+### Exercise 1: Asserting Integer Values
+
+An assertion that demonstrates that the value of two integer objects is **equal**, and another one that indicates that it is **not** equal.
+*(e.g., `assertThat(a).isEqualTo(b);`)*
+
+### Exercise 2: Asserting Object References
+
+An assertion that demonstrates that the **reference** to one object is the **same** as another, and another one that indicates that it is **different**.
+*(e.g., `assertThat(a).isSameAs(b);`)*
+
+### Exercise 3: Asserting Array Identity
+
+An assertion that indicates that two integer arrays are **identical** (i.e., contain the same elements in the same order).
+*(e.g., `assertThat(array1).isEqualTo(array2);`)*
+
+### Exercise 4: Asserting List Content and Order
+
+Create an `ArrayList` containing several types of objects (create them as well). Write assertions to verify:
+
+1.  The **order** of the objects as inserted.
+2.  The presence of the objects in **any order**.
+3.  That one object has been added **only once**.
+4.  That a specific object is **not** contained in the list.
+
+### Exercise 5: Asserting Map Keys
+
+Create a map and verify that it contains one of the **keys** you add to it.
+*(e.g., `assertThat(myMap).containsKey("myKey");`)*
+
+### Exercise 6: Asserting Exception Throwing
+
 Trigger an `ArrayIndexOutOfBoundsException` in any class. Create an assertion that validates that the exception is thrown when appropriate.
-### Exercise 7
+*(e.g., `assertThatThrownBy(() -> method()).isInstanceOf(Exception.class);`)*
+
+### Exercise 7: Asserting Optional Status
+
 Create an empty `Optional` object. Write the correct assertion to verify that it is indeed empty.
+*(e.g., `assertThat(optionalObject).isEmpty();`)*
+
+-----
 
 ## 💻 Used Technologies
 
-**Java**: 24 (OpenJDK)
+| Technology | Version | Description |
+| :--- | :--- | :--- |
+| **Java** | 24 (OpenJDK) | Language and environment for development. |
+| **JUnit 5** | 5.10.2 (or higher) | Testing framework. |
+| **AssertJ Core** | 3.25.3 (or higher) | **Fluent assertion library.** |
+| **Apache Maven** | 3.9.6 (or higher) | Build automation and project management tool. |
 
 -----
 
@@ -28,32 +59,42 @@ Create an empty `Optional` object. Write the correct assertion to verify that it
 
 - Operating System: Windows/macOS/Linux.
 
-- **Java Development Kit (JDK):** Version 24.0.1 (or higher). It is recommended to use an **OpenJDK** distribution.
+- **Java Development Kit (JDK):** Version **24.0.1** (or higher). Using an **OpenJDK** distribution is recommended.
 
-- Integrated Development Environment (IDE): IntelliJ IDEA.
+- **Apache Maven:** Installed and configured in the system PATH.
+
+- Integrated Development Environment (IDE): **IntelliJ IDEA** (recommended) or any other IDE with Maven support.
 
 -----
 
 ## 🛠️ Installation
 
-- Clone the Repository:
+1.  **Clone the Repository:**
 
-```bash
-git clone https://github.com/Rafadicandia/Tasca-S1.04-Testing-Nivell2.git
-```
+    ```bash
+    git clone https://github.com/Rafadicandia/Tasca-S1.04-Testing-Nivell2.git
 
-- IDE Configuration:
+    ```
 
-Open the file as a Java project.
+2.  **IDE Configuration:**
+
+    Open the folder as a **Maven project** in your IDE. The IDE will automatically download the necessary dependencies (`junit-jupiter-api` and `assertj-core`) defined in the `pom.xml` file.
+
+3.  **Build the Project:**
+
+    To ensure all dependencies are resolved and the project compiles correctly, you can run the following command in the terminal from the project root:
+
+    ```bash
+    mvn clean install
+    ```
 
 -----
 
 ## ▶️ Execution
 
-- Execute from the IDE
-  - Open the main file (the one containing the `main` method).
+### ⚙️ Execute from the IDE
 
-  - Right-click and select "Run 'Main'".
+- **Run Tests:** Locate the JUnit test classes (e.g., in the `src/test/java` folder), right-click on the test class or method, and select "Run '...Test'".
 
 -----
 
